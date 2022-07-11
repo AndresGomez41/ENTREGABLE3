@@ -21,7 +21,7 @@ const ResidentInfo =({url}) => {
         {
             setColor('red')
         }else if(data.status === `Alive`){
-            setColor(`green`)
+            setColor(`greenyellow`)
         }
     }
 
@@ -32,9 +32,11 @@ const ResidentInfo =({url}) => {
             <div className='img-box'><img src={data.image} alt="" /></div>
             <div className='infocard-box' >
                 <h3 > {data.name}</h3>
-                <div className={`status ${color}`}></div>
                 <ul>
-                    <li><b>Status: </b>{data.status}</li>
+                    <li className='status-box'>
+                        <b>Status:</b><span style={{color:color}}>{data.status}</span>
+                        <div className={`status ${color}`}></div>
+                    </li>
                     <li><b>Origin: </b>{data.origin?.name}</li>
                     <li><b>participation: </b>{data.episode?.length} episode{data.episode?.length !== 1 && 's'}</li>                    
                 </ul>

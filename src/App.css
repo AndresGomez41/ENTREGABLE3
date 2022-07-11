@@ -99,7 +99,7 @@ button:hover{
   justify-content:center;
 }
 b{
-  color: #9fc214;
+  color: #d7b403;
 }
 .cards-box{
   width: 95%;
@@ -120,9 +120,6 @@ b{
   box-shadow: 0 0 6px 0 rgb(255, 255, 255); 
   position: relative;
 }
-.card h3{
-  margin-top: 15px;
-}
 .img-box{
   width: 180px;
   height: 180px;
@@ -139,20 +136,25 @@ b{
   padding: .9rem .2rem .9rem .9rem;
   border-radius: 0 8px 8px 0;  
 }
-.status::after{
-  content:"";
-  position: absolute;
-  top: 5px;
-  width:20px;
-  height:20px;
+.status-box{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.status{
+  width:16px;
+  height:16px;
   border-radius: 50%;
   background-color: rgb(132, 131, 131);
+  margin-bottom: 5px;
 }
-.status.green::after{
+.status.greenyellow{
   background-color: rgb(1, 210, 1);
+  color: rgb(1, 210, 1);;
 }
-.status.red::after{
+.status.red{
   background-color: red;
+  color: red;
 }
 a{
   text-align: center;
@@ -192,13 +194,13 @@ ul{
     margin: 0 auto;
   }
   .cards-box{
-    width: 85%;
+    width: 781px;
     margin: 0 auto;
   }
 }
-@media (min-width:1400px){
+@media (min-width:1210px){
   .cards-box{
-     width: 1368px;
+     width: 1150px;
      margin: 0 auto;
   }
 }
