@@ -6,11 +6,12 @@ function App() {
   return (
     <div className="App">
       <header>
-        <div>
+        <div id='anchor-name'>
           <img src={title} alt="" />
         </div>
       </header>
       <InputID />
+      <a href="#anchor-name"> HOME </a>
     </div>
   )
 }
